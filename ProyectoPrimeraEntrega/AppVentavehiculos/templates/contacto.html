@@ -1,0 +1,22 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoquecambia %}
+<center>         
+    <form action="{% url 'contacto' %}" >
+
+        <p>Nombre: <input type="text" name="Nombre"/></p>
+        <p>E-mail: <input type="text" name="E-mail"/></p>
+        <p>Telefono: <input type="number" name="año"/></p>
+        <p>Comentario(opcional): <input type="number" name="Comentario(opcional)"/></p>
+    </form>
+
+    <center style="margin-top: 20px;">
+        <a class="btn" href="{% url 'Agradecimiento' %}">Contactarme!</a>
+    </center>  
+
+    
+</center> 
+
+{% endblock contenidoquecambia %}

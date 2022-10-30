@@ -1,0 +1,18 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoquecambia %}
+<center style="margin-bottom: 100px;">    
+    <h1>Sucursales de venta de vehículos</h1>
+
+    <h4 style="margin-bottom: 20px;">Mira las sucursales donde podrás ir a mirar los vehículos disponibles</h4>
+
+    {% for agencia in sucursales %}
+        <li>{{agencia.nombre}} - {{agencia.ubicacion}} - {{agencia.telefono}}</li>
+    {% endfor %}
+
+<a class="btn" href="{% url 'inicio' %}" style="margin-top: 50px;">Volver a inicio</a> 
+
+</center>  
+{% endblock contenidoquecambia %}

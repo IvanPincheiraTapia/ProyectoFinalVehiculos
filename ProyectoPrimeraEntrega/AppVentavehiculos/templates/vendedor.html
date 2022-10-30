@@ -1,0 +1,23 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoquecambia %}
+
+<center style="margin-bottom: 50px;">
+
+    <h1>Intranet Comercial</h1>
+    <h5 style="margin-bottom: 30px;">intranet empresa, agregue los vehículos disponibles para ventas</h5>
+    
+    <h5>Ejecutivos:</h5>
+    {% for agente in vendedor %}
+        <li>{{agente.nombre}} - {{agente.email}} - {{agente.telefono}} - {{agente.atencion}}</li>
+    {% endfor %}
+</center>
+<center style="margin-top: 20px;">
+    <a class="btn" href="{% url 'Formulario' %}">Agregar vehículo</a>
+    <a class="btn" href="{% url 'Formulario_vendedor' %}">Agregar ejecutivo</a>
+    <a class="btn" href="{% url 'Formulario_sucursal' %}">Agregar sucursal</a>
+</center>  
+
+{% endblock contenidoquecambia %}

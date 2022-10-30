@@ -1,0 +1,33 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoquecambia %}
+
+<center style="margin-bottom: 20px;">
+    <h1>Vista de vehiculos</h1>
+
+    <h4>Mira los vehiculos disponibles!</h4>
+</center>
+
+<table border="5" style="margin: 0 auto;">
+    <td style="color:rgb(13, 131, 13)"><b style="margin-right: 20px;">marca</b></td>
+    <td style="color:rgb(13, 131, 13)"><b style="margin-right: 20px;">modelo</b></td>
+    <td style="color:rgb(13, 131, 13)"><b style="margin-right: 20px;">precio</b></td>
+    <td style="color:rgb(13, 131, 13)"><b style="margin-right: 20px;">usado</b></td>
+
+    {% for vehiculo in vehiculos %}
+        <tr>
+            <td style="color:rgb(10, 102, 10)">{{vehiculo.marca}}</td>
+            <td style="color:rgb(10, 102, 10)">{{vehiculo.modelo}}</td>
+            <td style="color:rgb(10, 102, 10)">{{vehiculo.precio}}</td>  
+            <td style="color:rgb(10, 102, 10)">{{vehiculo.usado}}</td>
+        </tr>
+    {% endfor %}   
+</table>
+
+<center style="margin-top: 20px;">
+    <a class="btn" href="{% url 'contacto' %}">Lo quiero!</a>
+</center>  
+
+{% endblock contenidoquecambia %}

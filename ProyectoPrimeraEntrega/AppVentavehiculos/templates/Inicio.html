@@ -1,0 +1,18 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block contenidoquecambia %}
+ 
+<center>
+    <h1>Bienvenido a la plataforma de venta de Vehiculos</h1>
+
+    <h5 style="margin-top: 30px;">Concecionarias Vehículos te ofrece una diversa gama <br> de vehículos Nuevos, semi Usados y Usados, navega y escoje el tuyo!</h5>
+
+
+    <a class="btn" href="{% url 'vehiculos' %}" style="margin-top: 50px;">Vehiculos Disponibles</a>
+    <a class="btn" href="{% url 'sucursales' %}" style="margin-top: 50px;">Nuestras Sucursales</a>
+    <a class="btn" href="{% url 'vendedor' %}" style="margin-top: 50px;">Ejecutivos Comerciales</a>
+
+</center>
+{% endblock contenidoquecambia %}
